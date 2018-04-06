@@ -915,7 +915,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 				/* LCOV_EXCL_START */
 				log_fatal("Stopping at block %u\n", i);
 				++unrecoverable_error;
-				goto bail;
+				
 				/* LCOV_EXCL_STOP */
 			}
 
@@ -1023,7 +1023,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("DANGER! Unexpected close error in a data disk.\n");
 					log_fatal("Stopping at block %u\n", i);
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1040,7 +1040,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 						}
 						log_fatal("Stopping at block %u\n", i);
 						++unrecoverable_error;
-						goto bail;
+						
 						/* LCOV_EXCL_STOP */
 					}
 
@@ -1112,7 +1112,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 							log_fatal("DANGER! Unexpected truncate error in a data disk, it isn't possible to fix.\n");
 							log_fatal("Stopping at block %u\n", i);
 							++unrecoverable_error;
-							goto bail;
+							
 							/* LCOV_EXCL_STOP */
 						}
 
@@ -1330,7 +1330,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 							}
 							log_fatal("Stopping at block %u\n", i);
 							++unrecoverable_error;
-							goto bail;
+							
 							/* LCOV_EXCL_STOP */
 						}
 
@@ -1376,7 +1376,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 									log_fatal("WARNING! Without a working %s disk, it isn't possible to fix errors on it.\n", lev_name(l));
 									log_fatal("Stopping at block %u\n", i);
 									++unrecoverable_error;
-									goto bail;
+									
 									/* LCOV_EXCL_STOP */
 								}
 
@@ -1411,7 +1411,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 			/* LCOV_EXCL_START */
 			log_fatal("Stopping at block %u\n", i);
 			++unrecoverable_error;
-			goto bail;
+			
 			/* LCOV_EXCL_STOP */
 		}
 
@@ -1487,7 +1487,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("WARNING! Without a working data disk, it isn't possible to fix errors on it.\n");
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1505,7 +1505,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					}
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1519,7 +1519,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("WARNING! Without a working data disk, it isn't possible to fix errors on it.\n");
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1530,7 +1530,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("WARNING! Without a working data disk, it isn't possible to fix errors on it.\n");
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1651,7 +1651,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("WARNING! Without a working data disk, it isn't possible to fix errors on it.\n");
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1663,7 +1663,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("WARNING! Without a working data disk, it isn't possible to fix errors on it.\n");
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1681,7 +1681,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 						}
 						log_fatal("Stopping\n");
 						++unrecoverable_error;
-						goto bail;
+						
 						/* LCOV_EXCL_STOP */
 					}
 
@@ -1700,7 +1700,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 						}
 						log_fatal("Stopping\n");
 						++unrecoverable_error;
-						goto bail;
+						
 						/* LCOV_EXCL_STOP */
 					}
 
@@ -1754,7 +1754,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					log_fatal("WARNING! Without a working data disk, it isn't possible to fix errors on it.\n");
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
@@ -1771,7 +1771,7 @@ static int state_check_process(struct snapraid_state* state, int fix, struct sna
 					}
 					log_fatal("Stopping\n");
 					++unrecoverable_error;
-					goto bail;
+					
 					/* LCOV_EXCL_STOP */
 				}
 
